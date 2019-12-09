@@ -1,15 +1,15 @@
 import {combineReducers} from 'redux';
 import timerReducer, {TimerState, timerInitialState} from './timerReducer';
-import gitHubReducer, {GithubState, gitHubInitialState} from './gitHubReducer';
+import gitHubReducer, {GitHubState, gitHubInitialState} from './gitHubReducer';
 
 export interface AppState {
   timerReducer: TimerState;
-  githubReducer: GithubState;
+  gitHubReducer: GitHubState;
 }
 
 export const initialState: AppState = {
   timerReducer: {...timerInitialState},
-  githubReducer: {...gitHubInitialState},
+  gitHubReducer: {...gitHubInitialState},
 };
 
 const reducers = combineReducers({timerReducer, gitHubReducer});

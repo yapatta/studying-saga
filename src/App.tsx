@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet';
 
 import Timer from './containers/Timer';
 import Home from './components/Home';
-import Members from './components/Members';
+import Members from './containers/Members';
 
 const title = 'やぱったのReact';
 

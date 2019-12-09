@@ -5,21 +5,21 @@ import {GithubAction} from '../actions/github';
 import * as ActionType from '../actions/githubConstants';
 import {User} from '../services/github/models';
 
-export interface GithubState {
+export interface GitHubState {
   users: User[];
   isLoading: boolean;
   error?: AxiosError | null;
 }
 
-export const gitHubInitialState: GithubState = {
+export const gitHubInitialState: GitHubState = {
   users: [],
   isLoading: false,
 };
 
-const gitHubReducer: Reducer<GithubState, GithubAction> = (
-  state: GithubState = gitHubInitialState,
+const gitHubReducer: Reducer<GitHubState, GithubAction> = (
+  state: GitHubState = gitHubInitialState,
   action: GithubAction
-): GithubState => {
+): GitHubState => {
   switch (action.type) {
     case ActionType.GET_MEMBERS_START:
       return {
